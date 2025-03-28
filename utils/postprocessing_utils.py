@@ -452,6 +452,8 @@ def to_glb(
         verbose=verbose
     )
     texture = Image.fromarray(texture)
+    #change the path where u want to save the texture map
+    texture.save("texture_map.png")
 
     # rotate mesh (from z-up to y-up)
     vertices = vertices @ np.array([[1, 0, 0], [0, 0, -1], [0, 1, 0]])
